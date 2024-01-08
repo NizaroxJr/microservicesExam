@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Exam Microservices.iml" filepath="$PROJECT_DIR$/.idea/Exam Microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configserver/configserver.iml" filepath="$PROJECT_DIR$/configserver/configserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/courses/courses.iml" filepath="$PROJECT_DIR$/courses/courses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/demo.iml" filepath="$PROJECT_DIR$/gateway/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/eurekaserver/eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/students/students.iml" filepath="$PROJECT_DIR$/students/students.iml" />
+    </modules>
+  </component>
+</project>

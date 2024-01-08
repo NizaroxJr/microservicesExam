@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: "gatewayserver"
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lowerCaseServiceId: true
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+        discovery:
+          locator:
+            enabled: true
+            lower-case-service-id: true
+        routes:
+          - id: students-service
+            uri: http://localhost:8082
+            predicates:
+              - Path=/ws-student/**
+          - id: courses-service
+            uri: http://localhost:8081
+            predicates:
+              - Path=/ws-courses/**
+              -
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "gatewayserver"
+    description: "API Gateway Server Application"
+    version: "1.0.0"
+
+logging:
+  level:
+    com:
+      nizarhl:
+        gatewayserver: DEBUG
